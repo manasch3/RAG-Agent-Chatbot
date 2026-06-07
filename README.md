@@ -1,60 +1,119 @@
 # RAG Agent Chatbot
 
-This project is a RAG-powered chatbot application that uses the **DeepSeek LLM** and a **Retrieval-Augmented Generation (RAG)** pipeline to answer questions from your uploaded PDF documents.
+A modern Retrieval-Augmented Generation (RAG) chatbot designed to answer questions from uploaded PDF documents using semantic search and AI-generated responses.
 
-## 🚀 Key Features
+## Overview
 
-- **Expert Guidance**: Accurate answers on hospital admission, surgery preparation, discharge procedures, and follow-up care.
-- **RAG-Powered**: Answers are grounded in actual hospital preparation guidelines to ensure reliability and safety.
-- **Premium UI/UX**: A sleek, modern, and professional interface with a focus on ease of use and readability.
-- **Fully Responsive**: Optimized for seamless experiences across desktop, tablet, and mobile devices.
-- **Dark Mode Support**: A polished dark theme for comfortable viewing in all lighting conditions.
+This project combines document retrieval, vector embeddings, and large language model generation to provide context-aware answers grounded in your source documents. It is suitable for knowledge assistants, document Q&A systems, internal support tools, and AI-powered information retrieval workflows.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: HTML5, Vanilla JavaScript, CSS3, Tailwind CSS.
-- **Backend**: Python, Flask, Flask-CORS.
-- **AI/LLM**: LangChain, LangGraph, DeepSeek API.
-- **Vector Store**: FAISS (Facebook AI Similarity Search).
-- **Embeddings**: Sentence-Transformers (HuggingFace).
+- Upload and process PDF documents
+- Semantic retrieval using vector embeddings
+- Context-aware question answering with LLM generation
+- Responsive web interface
+- Python + Flask backend with FAISS-based retrieval
 
-## 📋 Prerequisites
+## Tech Stack
 
-- Python 3.12
-- A DeepSeek API Key
+- Python
+- Flask
+- Flask-CORS
+- LangChain
+- LangGraph
+- FAISS
+- Hugging Face Embeddings
+- DeepSeek API
+- PyPDF
 
-## ⚙️ Getting Started
+## Project Structure
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/manasch3/RAG-Aagent-Chatbot.git
-   cd RAG-Aagent-Chatbot
-   ```
+```text
+rag-chatbot/
+├── app.py
+├── chat.py
+├── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   └── styles.css
+└── PDF/
+```
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Prerequisites
 
-3. **Configure Environment Variables**:
-   Create a `.env` file in the root directory and add your API key:
-   ```env
-   DEEPSEEK_API_KEY=your_api_key_here
-   HUGGINGFACE_API_KEY =your_api_key_here
-   ```
+- Python 3.10+
+- A valid DeepSeek API key
+- A valid Hugging Face API key (if required by your environment)
 
-4. **Run the application**:
-   ```bash
-   python app.py
-   ```
+## Getting Started
 
-5. **Access the interface**:
-   Open your browser and navigate to `http://localhost:5000`.
+### 1. Clone the repository
 
-## 📄 License
-This project was developed by Manas as part of an internship evaluation task.
+```bash
+git clone https://github.com/manasch3/RAG-Aagent-Chatbot.git
+cd RAG-Aagent-Chatbot
+```
 
-The code is shared for demonstration and evaluation purposes only. It may be viewed and used for learning, but redistribution or commercial use is not permitted without permission.
+### 2. Create a virtual environment
 
----
-*Powered by DeepSeek & Hospital Knowledge AI*
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file in the project root and add the required keys:
+
+```env
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+HUGGINGFACE_API_KEY=your_huggingface_api_key_here
+```
+
+### 5. Run the application
+
+```bash
+python app.py
+```
+
+Open the app in your browser at:
+
+```text
+http://localhost:5000
+```
+
+## How It Works
+
+1. PDF files from the `PDF/` folder are loaded.
+2. The content is split into smaller chunks.
+3. Embeddings are generated using Hugging Face models.
+4. FAISS stores the embeddings for similarity-based retrieval.
+5. The LLM uses the retrieved context to generate accurate answers.
+
+## License
+
+This project is intended for educational, research, and demonstration purposes.
+
+## Contact
+
+For questions or collaboration opportunities, please use the repository discussion or contact channels associated with this project.
