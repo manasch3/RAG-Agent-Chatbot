@@ -1,6 +1,6 @@
-# MediAssist AI - Hospitalisation Preparation Assistant
+# RAG Agent Chatbot
 
-**MediAssist AI** is a professional, RAG-powered healthcare assistant designed to help patients prepare for hospitalisation with confidence. It utilizes the **DeepSeek LLM** and a robust **Retrieval-Augmented Generation (RAG)** pipeline to provide accurate, document-based guidance.
+This project is a RAG-powered chatbot application that uses the **DeepSeek LLM** and a **Retrieval-Augmented Generation (RAG)** pipeline to answer questions from your uploaded PDF documents.
 
 ## 🚀 Key Features
 
@@ -27,8 +27,8 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/manasch3/mediassist-ai-rag.git
-   cd mediassist-ai-rag
+   git clone https://github.com/manasch3/RAG-Aagent-Chatbot.git
+   cd RAG-Aagent-Chatbot
    ```
 
 2. **Install dependencies**:
@@ -51,13 +51,10 @@
 5. **Access the interface**:
    Open your browser and navigate to `http://localhost:5000`.
 
-<<<<<<< HEAD
 ## 📄 License
 This project was developed by Manas as part of an internship evaluation task.
 
 The code is shared for demonstration and evaluation purposes only. It may be viewed and used for learning, but redistribution or commercial use is not permitted without permission.
-=======
->>>>>>> 26d0f08 (Prepare project for Render deployment (update app config and dependencies))
 
 ---
 *Powered by DeepSeek & Hospital Knowledge AI*

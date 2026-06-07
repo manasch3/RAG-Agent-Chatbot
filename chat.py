@@ -70,7 +70,6 @@ rag_tool = StructuredTool(
 
 tools = [rag_tool]
 
-# Bind tools
 llm_with_tools = llm.bind_tools(tools)
 
 # ================== CHAT STATE ==================
